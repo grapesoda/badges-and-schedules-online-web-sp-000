@@ -4,4 +4,4 @@ def badge_maker(name)
   
   badge_maker = []
   
-  name.each do 
+  name.each do ||
