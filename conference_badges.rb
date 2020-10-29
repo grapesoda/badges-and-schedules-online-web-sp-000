@@ -11,5 +11,5 @@ def batch_badge_creator(*names)
       badge_messages << "Hello, my name is #{n}"
     end
   end
-  msg
+  badge_messages
 end
