@@ -5,7 +5,6 @@ def badge_maker(name)
   badge_maker = []
   
   name.each do ||
-    puts
-  badge_maker << integer ** 2
+    puts "Hello, my name is #{name}."
+  
  end
- return badge_maker
