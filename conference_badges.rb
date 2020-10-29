@@ -1,18 +1,30 @@
 # Write your code here.
 
 def badge_maker(name)
-    "Hello, my name is #{name}."
- end
-
-def batch_badge_creator(attendees)
-  
-  attendees.each do |name|
-  end
-  badge_messages
+  return "Hello, my name is #{name}."
 end
 
-badge_messages = ["Red", "Yellow", "Blue"]
-primary_colors.each do |color| # do begins a block
-  # the lines between the do/end are the block's body
-  puts "Primary Color #{color} is #{color.length} letters long."
-end 
+def batch_badge_creator(names)
+  messages = [] 
+  names.each do |name|
+    messages <<  badge_maker(name)
+  end
+  return messages
+end
+
+def assign_rooms(speakers)
+  greet = []
+  speakers.each_with_index{ |speakers, index| greet << "Hello, #{speakers}! You'll be assigned to room #{index+1}!"}
+  return greet
+  end
+
+def printer(attendees)
+  resultOne = batch_badge_creator(attendees)
+  resultOne.each do |x|
+    puts x 
+  end
+  result = assign_rooms(attendees)
+  result.each do |x|
+    puts x 
+  end
+end
